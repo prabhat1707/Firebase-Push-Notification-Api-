@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">FirebaseSample</string>
+    <string name="token">db2tlCennF8:APA91bE1YGlIM8-f8UizSumJlJORlI4nITZ_p2g8mtRMXHmy9dYYLcDjzs3EUbglMQ25ritk62C4glDJOhFfqtAeUhBUfWSgWCPXbI0D0xK0vsKXzM_ZvVK1aOa24UFY65Xrh4fNcbH</string>
+    <string name="server_key">AAAAVRCSZOg:APA91bEhTBNmNFld6cVnn8lHvR2XVO0TQoRtcD8Q_iUelNG9zLH6_p6gPLPd64cpy0issHd_9qo6rzedFleinlTPWu9gPt_NTw-sbo7qGDt41XESLutNXT-8cDnrvy2Ib5emm629atLVeDmhQe8JbmE6IJ1I65Q2vQ</string>
+</resources>
