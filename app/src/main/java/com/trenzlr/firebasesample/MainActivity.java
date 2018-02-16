@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity implements FirebaseNotiCallB
             @Override
             public void onClick(View v) {
                 FirebaseNotificationHelper.initialize(getString(R.string.server_key))
-                        .defaultJson(true, getJsonBody())
+                        .defaultJson(false, getJsonBody())
                         .setCallBack(MainActivity.this)
                         .receiverFirebaseToken(SharedPrefUtil.getInstance(MainActivity.this).getString(FIREBASE_TOKEN))
                         .send();
@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity implements FirebaseNotiCallB
             @Override
             public void onClick(View v) {
                 FirebaseNotificationHelper.initialize(getString(R.string.server_key))
-                        .defaultJson(false, null)
+                        .defaultJson(true, null)
                         .title("Test")
                         .message("Test Mess")
                         .setCallBack(MainActivity.this)

@@ -76,7 +76,7 @@ public class FirebaseNotificationHelper {
 
     public void send() {
 
-        if (!useDefaultJson) {
+        if (useDefaultJson) {
 
             new NetworkCall(callBack).execute(getValidJsonBody().toString(), serverApiKey);
 
@@ -91,7 +91,7 @@ public class FirebaseNotificationHelper {
         JSONObject jsonObjectBody = new JSONObject();
         try {
             jsonObjectBody.put(KEY_TO, mReceiverFirebaseToken);
-            if (!useDefaultJson) {
+            if (useDefaultJson) {
                 JSONObject jsonObjectData = new JSONObject();
                 jsonObjectData.put(KEY_TITLE, mTitle);
                 jsonObjectData.put(KEY_TEXT, mMessage);
