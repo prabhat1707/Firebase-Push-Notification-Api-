@@ -29,8 +29,8 @@ allprojects {
 ````
 
 		dependencies {
-	        implementation 'com.github.prabhat1707:Firebase-Push-Notification-Api-:1.0'
-	}
+	        implementation 'com.github.prabhat1707:Firebase-Push-Notification-Api-:1.1'
+		}
 	
   
 ````
