@@ -15,6 +15,7 @@ import java.io.OutputStreamWriter;
 import java.io.Writer;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.nio.charset.StandardCharsets;
 
 import static android.content.ContentValues.TAG;
 import static com.trenzlr.firebasenotificationhelper.Constants.APPLICATION_JSON;
@@ -50,7 +51,7 @@ public class NetworkCall extends AsyncTask<String, Void, String> {
             urlConnection.setRequestProperty(CONTENT_TYPE, APPLICATION_JSON);
             urlConnection.setRequestProperty(AUTHORIZATION, authKey);
             //set headers and method
-            Writer writer = new BufferedWriter(new OutputStreamWriter(urlConnection.getOutputStream(), "UTF-8"));
+            Writer writer = new BufferedWriter(new OutputStreamWriter(urlConnection.getOutputStream(), StandardCharsets.UTF_8));
             writer.write(JsonDATA);
             // json data
             writer.close();
@@ -90,9 +91,7 @@ public class NetworkCall extends AsyncTask<String, Void, String> {
                 }
             }
         }
-
         return JsonResponse;
-
     }
 
     @Override

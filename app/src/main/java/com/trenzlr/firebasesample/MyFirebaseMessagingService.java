@@ -10,11 +10,13 @@ import android.graphics.Bitmap;
 import android.media.RingtoneManager;
 import android.net.Uri;
 import android.os.Build;
-import android.os.Bundle;
-import android.support.v4.app.NotificationCompat;
+
+import androidx.annotation.NonNull;
+import androidx.core.app.NotificationCompat;
 
 import com.google.firebase.messaging.FirebaseMessagingService;
 import com.google.firebase.messaging.RemoteMessage;
+
 
 /**
  * Created by prabh on 25-10-2017.
@@ -24,6 +26,13 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
     private static final String TAG = "FCM Service";
     private Bitmap bitmap;
     private Context context = this;
+    public static final String FIREBASE_TOKEN = "token";
+
+    @Override
+    public void onNewToken(@NonNull String refreshedToken) {
+        super.onNewToken(refreshedToken);
+        SharedPrefUtil.getInstance(this).put(FIREBASE_TOKEN, refreshedToken);
+    }
 
     @Override
     public void onMessageReceived(RemoteMessage remoteMessage) {

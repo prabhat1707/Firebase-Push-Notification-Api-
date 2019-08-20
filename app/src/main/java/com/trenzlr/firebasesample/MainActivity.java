@@ -1,11 +1,12 @@
 package com.trenzlr.firebasesample;
 
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.trenzlr.firebasenotificationhelper.FirebaseNotiCallBack;
 import com.trenzlr.firebasenotificationhelper.FirebaseNotificationHelper;
@@ -15,7 +16,8 @@ import org.json.JSONObject;
 
 import static com.trenzlr.firebasesample.Constants.KEY_TEXT;
 import static com.trenzlr.firebasesample.Constants.KEY_TITLE;
-import static com.trenzlr.firebasesample.FirebaseIDService.FIREBASE_TOKEN;
+import static com.trenzlr.firebasesample.MyFirebaseMessagingService.FIREBASE_TOKEN;
+
 
 public class MainActivity extends AppCompatActivity implements FirebaseNotiCallBack {
     private Button sendMess, sendMess2;
