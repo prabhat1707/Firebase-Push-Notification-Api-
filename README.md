@@ -105,7 +105,7 @@ All this passing data i.e- title and mess are rec in your FirebaseMessService, w
 At time of rec notification you will get json also with the same key as you use at time of sending. So, retrive by using same key.
 Some key are in sample project for default json and for custom use according to you.
 
-#### For Any Query Mail me to "prabhatrai@trenzlr.com"
+#### For Any Query Mail me to "prabhat.rai1707@gamil.com"
 #### Thanks 
 
 # License
